@@ -3,9 +3,18 @@
 * {
   font-family: 'Museo Sans Cyrl', sans-serif;
   font-weight: 300;
+  box-sizing: border-box;
 }
 
 .container {
   width: 950px;
   margin: 0 auto;
 }
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+@import 'blocks/buttons.scss';
+@import 'blocks/promo.scss';
+@import 'blocks/header.scss';
