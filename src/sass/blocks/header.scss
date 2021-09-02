@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
 }
 
 .header__logo {
@@ -17,6 +21,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 20px;
+  }
 }
 
 .header__text-top {
@@ -25,6 +33,8 @@
 }
 
 .header__text-bottom {
+  font-family: 'Museo Moderno', sans-serif;
+  font-weight: 500;
   font-size: 18px;
   line-height: 29px;
 }
@@ -33,6 +43,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 20px;
+  }
 }
 
 .header__phone {
