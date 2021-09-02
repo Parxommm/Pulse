@@ -1,0 +1,35 @@
+.feed-form {
+  margin-top: 38px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    max-width: 300px;
+    margin: 38px auto 0 auto;
+  }
+}
+
+.feed-form__input {
+  height: 50px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: none;
+  padding: 0 20px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #4B4B4B;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &::placeholder {
+    color: #4B4B4B;
+  }
+}
+
+.feed-form__button {
+  margin-top: 20px;
+}
