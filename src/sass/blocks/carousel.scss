@@ -41,11 +41,13 @@
       }
 
       button {
+        position: relative;
         display: block;
         font-size: 0;
-        width: 10px;
+        width: 15px;
         height: 15px;
         border-radius: 50%;
+        padding: 0;
         border-color: #000;
         background-color: #fff;
         border-style: solid;
@@ -53,8 +55,18 @@
     }
 
     .slick-active {
+
       button {
-        background-color: #FF0000;
+        &::before {
+          position: absolute;
+          content: '';
+          width: 7px;
+          height: 7px;
+          top: 2px;
+          left: 2px;
+          border-radius: 50%;
+          background-color: #FF0000;
+        }
       }
     }
   }
