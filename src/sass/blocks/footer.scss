@@ -68,6 +68,16 @@
   color: #ffffff;
   text-align: center;
   margin-top: 36px;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.7;
+    color: #ffffff;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 
   @media (max-width: $tablet-width) {
     font-size: 16px;
@@ -97,5 +107,13 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }

@@ -10,6 +10,17 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 19px;
+  transition: color 0.3s, background-color 0.3s, border 0.3s;
+
+  &:hover {
+    color: #C70101;
+    background-color: #fff;
+    border: 2px solid #C70101;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 
   &--main {
     width: 300px;
