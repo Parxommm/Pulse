@@ -31,4 +31,55 @@ $(document).ready(function(){
   }
   toggleSlide('.catalog-item__about');
   toggleSlide('.catalog-item__back');
+
+  // Modal
+  $('[data-modal=consultation]').on('click', () => {
+    $('.overlay, #consultation').fadeIn();
+  })
+
+  $('.modal__button-close').on('click', () => {
+    $('.overlay, #consultation, #order, #thanks').fadeOut();
+  })
+
+  $('.button--item').each(function(i) {
+    $(this).on('click', () => {
+      $('#order .modal__subtitle').text($('.catalog-item__name').eq(i).text());
+      $('.overlay, #order').fadeIn();
+    })
+  })
+
+  // Validation 
+  validateForm = (form) => {
+    $(form).validate({
+      rules: {
+        name: {
+        required: true,
+        minlength: 2
+        },
+        phone: 'required',
+        email: {
+          required: true,
+          email: true,
+        }
+      },
+      messages: {
+        name: {
+          required: "Пожалуйста, введите свое имя",
+          minlength: jQuery.validator.format("Минимум {0} символа!")
+        },
+        phone: "Пожалуйста, введите свой номер телефона",
+        email: {
+          required: "Пожалуйста, введите свой email",
+          email: "Введите правильный email в формате name@domain.com"
+        }
+      }
+    });
+  }
+
+  validateForm('.consultation__form');
+  validateForm('#consultation form');
+  validateForm('#order form');
+
+  // Masked Input
+  $('input[name=phone]').mask("+375(99) 999-99-99");
 });

@@ -23,7 +23,7 @@
         </div>
         <div class="header__contacts">
           <a class="header__phone" href="tel:+74999228974">+7 (499) 922-89-74</a>
-          <button class="header__button button">заказать звонок</button>
+          <button class="header__button button" data-modal="consultation">заказать звонок</button>
         </div>
       </header>
       <div class="promo__wrapper">
@@ -43,7 +43,7 @@
             Ответим на все вопросы
           </div>
         </div>
-        <button class="button button--main">заказать кОНСУЛЬТАЦИЮ</button>
+        <button class="button button--main" data-modal="consultation">заказать кОНСУЛЬТАЦИЮ</button>
         <div class="promo__link">
           или
           <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
@@ -84,9 +84,9 @@
         и мы перезвоним вам в течении 10 минут
       </p>
       <form class="consultation__form feed-form" action="#" method="POST">
-          <input class="feed-form__input" type="text" name="name" placeholder="Ваше имя" required>
-          <input class="feed-form__input" type="tel" name="phone" placeholder="Ваш телефон" required>
-          <input class="feed-form__input" type="email" name="email" placeholder="Ваш E-mail" required>
+          <input class="feed-form__input" type="text" name="name" placeholder="Ваше имя">
+          <input class="feed-form__input" type="tel" name="phone" placeholder="Ваш телефон">
+          <input class="feed-form__input" type="email" name="email" placeholder="Ваш E-mail">
           <button class="feed-form__button button button--submit">Заказать консультацию</button>
       </form>
     </div>
@@ -606,9 +606,42 @@
     </div>
   </footer>
 
+  <div class="overlay">
+    <section class="modal" id="consultation">
+      <button class="modal__button-close">&times;</button>
+      <h2 class="modal__title">Просто заполните форму заявки</h2>
+      <p class="modal__subtitle">и мы перезвоним вам в течении 10 минут</p>
+      <form class="modal__form feed-form" action="#" method="POST">
+        <input class="feed-form__input" type="text" name="name" placeholder="Ваше имя">
+        <input class="feed-form__input" type="tel" name="phone" placeholder="Ваш телефон">
+        <input class="feed-form__input" type="email" name="email" placeholder="Ваш E-mail">
+        <button class="feed-form__button button button--submit">Заказать консультацию</button>
+    </form>
+    </section>
+
+    <section class="modal" id="order">
+      <button class="modal__button-close">&times;</button>
+      <h2 class="modal__title">Ваш заказ:</h2>
+      <p class="modal__subtitle">Пульсометр Polar FT1</p>
+      <form class="modal__form feed-form" action="#" method="POST">
+        <input class="feed-form__input" type="text" name="name" placeholder="Ваше имя">
+        <input class="feed-form__input" type="tel" name="phone" placeholder="Ваш телефон">
+        <input class="feed-form__input" type="email" name="email" placeholder="Ваш E-mail">
+        <button class="feed-form__button button button--submit">Купить</button>
+    </form>
+    </section>
+
+    <section class="modal modal--mini" id="thanks">
+      <button class="modal__button-close">&times;</button>
+      <h2 class="modal__title">Спасибо за вашу заявку!</h2>
+      <p class="modal__subtitle">Наш менеджер свяжется с вами в ближайшее время!</p>
+  </div>i
+
   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
