@@ -19,7 +19,18 @@
   display: none;
   flex-direction: column;
   align-items: center;
-  min-height: 100%;
+  min-height: 338px;
+
+  &--active {
+    display: flex;
+  }
+}
+
+.catalog-item__info {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 338px;
 
   &--active {
     display: flex;
@@ -29,17 +40,6 @@
 .catalog-item__list {
   list-style: none;
   padding: 0;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100%;
-  transition: 1s all;
-  opacity: 0;
-
-  &--active {
-    display: flex;
-    opacity: 100%;
-  }
 
   li {
     position: relative;
@@ -94,6 +94,7 @@
   text-transform: uppercase;
   margin-top: auto;
   margin-bottom: 20px;
+  text-align: center;
 
   &:hover {
     opacity: 0.7;

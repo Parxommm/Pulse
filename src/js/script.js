@@ -25,7 +25,7 @@ $(document).ready(function(){
       $(this).on('click', function(evt) {
         evt.preventDefault();
         $('.catalog-item__content').eq(i).toggleClass('catalog-item__content--active');
-        $('.catalog-item__list').eq(i).toggleClass('catalog-item__list--active');
+        $('.catalog-item__info').eq(i).toggleClass('catalog-item__info--active');
       })
     })
   }
@@ -98,4 +98,21 @@ $(document).ready(function(){
     });
     return false;
   });
+
+  // Smooth scroll and page up
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 1600) {
+      $('.pageup').fadeIn();
+    } else {
+      $('.pageup').fadeOut();
+    }
+  });
+
+  $('.pageup').click(function(){
+    var _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+    return false;
+  });
+
+  new WOW().init();
 });
